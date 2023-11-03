@@ -22,7 +22,7 @@ subscribe(update);
 //   dispatch(creator(...args));
 // }
 
-const{inc, dec, rnd} = bindActionCreators(actions, dispatch);
+const{inc, dec, rnd, inc_five, dec_three} = bindActionCreators(actions, dispatch);
 // const decDispatch = bindActionCreators(dec ,dispatch);
 // const rndDispatch = bindActionCreators(rnd, dispatch);
 
@@ -32,6 +32,9 @@ document.getElementById("rnd").addEventListener("click", () => {
   const value = Math.floor(Math.random() * 10);
   rnd(value);
 });
+document.getElementById("inc_five").addEventListener("click", inc_five);
+document.getElementById("dec_three").addEventListener("click", dec_three);
+
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
